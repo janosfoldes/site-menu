@@ -1,0 +1,68 @@
+{
+  "name": "@janosfoldes/site-menu",
+  "version": "0.1.0",
+  "description": "Responsive site navigation menu",
+  "main": "dist/js/site-menu.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/janosfoldes/site-menu.git"
+  },
+  "keywords": [
+    "menu",
+    "submenu",
+    "responsive"
+  ],
+  "author": "János Földes",
+  "license": "MIT",
+  "browserslist": [
+    "last 2 versions",
+    "ie >= 9",
+    "safari >= 7",
+    "android >= 4.4"
+  ],
+  "browserify": {
+    "debug": true,
+    "transform": [
+      [
+        "babelify",
+        {
+          "presets": [
+            "@babel/preset-env"
+          ]
+        }
+      ]
+    ]
+  },
+  "devDependencies": {
+    "@babel/core": "^7.1.2",
+    "@babel/preset-env": "^7.1.0",
+    "@babel/register": "^7.0.0",
+    "@janosfoldes/scss-utils": "^0.1.0",
+    "babelify": "^10.0.0",
+    "browser-sync": "^2.26.3",
+    "browserify": "^16.2.3",
+    "css-mqpacker": "^7.0.0",
+    "cssnano": "^4.1.5",
+    "cssnano-preset-advanced": "^4.0.3",
+    "foundation-sites": "^6.5.0-rc.4",
+    "gulp": "^4.0.0",
+    "gulp-buffer": "0.0.2",
+    "gulp-debug": "^4.0.0",
+    "gulp-filter": "^5.1.0",
+    "gulp-plumber": "^1.2.0",
+    "gulp-postcss": "^8.0.0",
+    "gulp-rename": "^1.4.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-sourcemaps": "^2.6.4",
+    "gulp-tap": "^1.0.1",
+    "gulp-uglify": "^3.0.1",
+    "gulp-wait": "0.0.2",
+    "node-sass": "^4.9.4"
+  },
+  "dependencies": {
+    "jquery": "^3.3.1"
+  }
+}

@@ -1,0 +1,54 @@
+.site-menu a {
+  align-items: center;
+  display: flex;
+  position: relative; }
+
+@media screen and (max-width: 60em) {
+  .site-menu li {
+    width: 100%; } }
+
+.submenu.no-anim {
+  transition: all 0s ease 0s !important; }
+
+.submenu-icon:after, .submenu-icon:before {
+  background-color: #0a0a0a;
+  content: "";
+  height: 0.375rem;
+  position: absolute;
+  transition: transform .25s ease-in-out;
+  width: 0.125rem; }
+
+.submenu-icon {
+  bottom: auto;
+  display: inline-block;
+  margin: 0;
+  position: absolute;
+  right: 1.5rem;
+  top: calc(50% - 0.1875rem); }
+  @media screen and (min-width: 60em) {
+    .submenu-icon {
+      display: inline-block;
+      height: 0.375rem;
+      margin: 0 0 0 0.375rem;
+      position: static; } }
+  .submenu-icon:after {
+    transform: translate(-0.09868rem, 0) rotate(-45deg); }
+  .submenu-icon:before {
+    transform: translate(0.09868rem, 0) rotate(45deg); }
+
+a.is-expanded > i.submenu-icon:after {
+  transform: translate(0.09868rem, 0) rotate(-45deg); }
+
+a.is-expanded > i.submenu-icon:before {
+  transform: translate(-0.09868rem, 0) rotate(45deg); }
+
+a:hover > .submenu-icon:after, a:hover > .submenu-icon:before, a.is-expanded > .submenu-icon:after, a.is-expanded > .submenu-icon:before {
+  background-color: #02869D; }
+
+@media screen and (max-width: 60em) {
+  .submenu {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease; } }
+
+/*# sourceMappingURL=../maps/site-menu.css.map */

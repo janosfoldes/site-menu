@@ -1,0 +1,12 @@
+// SITE SUBMENU ACCORDION
+// ======================
+
+@include breakpoint($site-menu-reveal-at down) {
+    // Submenu
+    // -------
+    #{$site-submenu-selector} {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height $site-submenu-transition-duration-accordion $site-submenu-transition-timing-accordion;
+    }
+}

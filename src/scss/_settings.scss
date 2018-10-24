@@ -1,0 +1,32 @@
+// SITE MENU SETTINGS
+// ==================
+
+// Site Menu
+// ---------
+
+$site-menu-reveal-at: 960 !default;
+
+// Site Submenu
+// ------------
+
+$site-submenu-selector: '.submenu' !default;
+$site-submenu-transition-delay: .1s !default;
+$site-submenu-transition-duration: .8s !default;
+$site-submenu-transition-timing: cubic-bezier(.25,.8,.25,1) !default;
+
+// Site Submenu Accordion
+// ----------------------
+
+$site-submenu-transition-duration-accordion: .4s !default;
+$site-submenu-transition-timing-accordion: ease !default;
+
+// Site Submenu Arrow
+// ------------------
+
+$site-submenu-arrow-adjustment: ( far-right, right ) !default; // [bottom|far-right|right]
+$site-submenu-arrow-color: #0a0a0a !default;
+$site-submenu-arrow-color-hover: #02869D !default;
+$site-submenu-arrow-padding: rem-calc(24) !default;
+$site-submenu-arrow-size: rem-calc(6) !default;
+$site-submenu-arrow-spacing: rem-calc(6) !default;
+$site-submenu-arrow-thickness: rem-calc(2) !default;

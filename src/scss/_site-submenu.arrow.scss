@@ -1,0 +1,86 @@
+// SITE SUBMENU ARROW
+// ==================
+
+// Calculated Settings
+// -------------------
+
+$site-submenu-arrow-translate: $site-submenu-arrow-size / 3.8;
+
+// Mixins
+// ------
+
+@mixin adjust-submenu-arrow($to, $padding: 0) {
+    @if $to == 'bottom' {
+        bottom: 0;
+        margin: $site-submenu-arrow-spacing 0;
+        top: auto;
+        @include horizontal-center;
+    } @else if $to == 'far-right' {
+        bottom: auto;
+        display: inline-block;
+        margin: 0;
+        position: absolute;
+        right: get-right($padding);
+        $top: $site-submenu-arrow-size / 2;
+        top: calc(50% - #{$top});
+    } @else  {
+        display: inline-block;
+        height: $site-submenu-arrow-size;
+        margin: 0 0 0 $site-submenu-arrow-spacing;
+        position: static;
+    }
+}
+
+// Extends
+// -------
+
+%submenu-icon {
+    background-color: $site-submenu-arrow-color;
+    content: "";
+    height: $site-submenu-arrow-size;
+    position: absolute;
+    transition: transform .25s ease-in-out;
+    width: $site-submenu-arrow-thickness;
+}
+
+// Submenu Icon
+// ------------
+
+.submenu-icon {
+    @include adjust-submenu-arrow(nth($site-submenu-arrow-adjustment,1), $site-submenu-arrow-padding);
+    @include breakpoint($site-menu-reveal-at) {
+        @include adjust-submenu-arrow(nth($site-submenu-arrow-adjustment,2), $site-submenu-arrow-padding);
+    }
+    &:after {
+        @extend %submenu-icon;
+        transform: translate( -($site-submenu-arrow-translate) , 0 ) rotate( -45deg );
+    }
+    &:before {
+        @extend %submenu-icon;
+        transform: translate( $site-submenu-arrow-translate , 0 ) rotate( 45deg );
+    }
+}
+
+// Expanded Submenu Icon
+// ---------------------
+
+a.is-expanded > i.submenu-icon {
+    &:after {
+        transform: translate( $site-submenu-arrow-translate , 0 ) rotate( -45deg );
+    }
+    &:before {
+        transform: translate( -($site-submenu-arrow-translate) , 0 ) rotate( 45deg );
+    }
+}
+
+// Submenu Arrow Exapanded/Hover State
+// -----------------------------------
+
+a:hover, a.is-expanded {
+    > .submenu-icon {
+        &:after,
+        &:before {
+            background-color: $site-submenu-arrow-color-hover;
+        }
+    }
+}

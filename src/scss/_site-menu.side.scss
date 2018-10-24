@@ -1,0 +1,15 @@
+// SITE MENU SIDE
+// ==============
+
+@include breakpoint($site-menu-reveal-at down) {
+    // Site Menu
+    // ---------
+    .site-menu {
+
+        // List Item
+        // ---------
+        li {
+            width: 100%;
+        }
+    }
+}

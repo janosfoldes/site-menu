@@ -1,0 +1,9 @@
+// SITE SUBMENU
+// ============
+
+#{$site-submenu-selector} {
+    // NO Animation!
+    &.no-anim {
+        transition: all 0s ease 0s !important;
+    }
+}
